@@ -35,8 +35,9 @@ class WisatawanController extends Controller
 
   public function edit($id)
   {
+    $user = \App\User::find($id);
     $wisatawan = \App\Wisatawan::find($id);
-    return view('wisatawan/edit',['wisatawan'=>$wisatawan]);
+    return view('wisatawan/edit',['wisatawan'=>$wisatawan],['user'=>$user]);
   }
 
   public function update(Request $request,$id)

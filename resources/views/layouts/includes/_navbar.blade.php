@@ -55,6 +55,7 @@
             @endif
             <!-- <li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
             <li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li> -->
+            <li><a href="{{route('password.change')}}"><i class="lnr lnr-lock"></i> <span>Ganti password</span></a></li>
             <li><a href="/logout"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
           </ul>
         </li>

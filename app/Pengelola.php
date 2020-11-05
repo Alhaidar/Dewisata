@@ -25,4 +25,9 @@ class Pengelola extends Model
       }
         return asset('ktp/'.$this->ktp);
     }
+
+    public function User()
+    {
+      return $this->belongsTo('App\User'); 
+    }
 }

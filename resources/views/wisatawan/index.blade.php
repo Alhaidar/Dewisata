@@ -10,10 +10,10 @@
               <div class="panel panel-headline">
 								<div class="panel-heading">
 									<h3 class="panel-title">Data Wisatawan</h3>
-                  <p class="panel-subtitle">Catatan: Jika anda menghapus data wisatawan anda juga harus menghapus data akun di halaman akun</p>
+                  <!-- <p class="panel-subtitle">Catatan: Jika anda menghapus data wisatawan anda juga harus menghapus data akun di halaman akun</p>
                   <div class="right">
                     <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal"><i class="lnr lnr-plus-circle"></i></button>
-                  </div>
+                  </div> Tidak Jadi diimplementasikan -->
 								</div>
               </div>
 								<div class="panel-body">
@@ -24,7 +24,7 @@
                         <th>NAMA BELAKANG</th>
                         <th>JENIS KELAMIN</th>
                         <th>ALAMAT</th>
-                        <th>AKSI</th>
+                        <!-- <th>AKSI</th> Tidak diimplementasikan -->
 											</tr>
 										</thead>
 										<tbody>
@@ -34,10 +34,10 @@
                         <td><a href="/wisatawan/{{$wisatawan->id}}/profile">{{$wisatawan->nama_belakang}}</a></td>
                         <td>{{$wisatawan->jenis_kelamin}}</td>
                         <td>{{$wisatawan->alamat}}</td>
-                        <td>
+                        <!-- <td>
                           <a href="/wisatawan/{{$wisatawan->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
                           <a href="/wisatawan/{{$wisatawan->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Yakin?')">Delete</a>
-                        </td>
+                        </td> Tidak diimplementasikan -->
                       </tr>
                       @endforeach
 										</tbody>
@@ -51,7 +51,7 @@
   </div>
 
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -102,4 +102,5 @@
         </div>
       </div>
     </div>
+  </div> Tidak diimplementasikan -->
 @stop

@@ -16,4 +16,9 @@ class Wisatawan extends Model
     }
       return asset('images/'.$this->avatar);
   }
+
+  public function User()
+  {
+    return $this->belongsTo('App\User');
+  }
 }

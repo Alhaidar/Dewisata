@@ -36,6 +36,10 @@
                         <label for="exampleFormControlTextarea1">Alamat</label>
                         <textarea name="alamat" class="form-control" id="exampleFormControlTextarea1" rows="3">{{$wisatawan->alamat}}</textarea>
                       </div>
+                      <!-- <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Email</label>
+                        <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email" value="{{$wisatawan->email}}">
+                      </div> -->
                       <div class="form-group">
                         <label for="exampleInputEmail1">No Hp</label>
                         <input name="no_hp" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Belakang" value="{{$wisatawan->no_hp}}">

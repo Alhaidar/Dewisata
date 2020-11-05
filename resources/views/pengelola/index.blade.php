@@ -10,10 +10,10 @@
               <div class="panel panel-headline">
 								<div class="panel-heading">
 									<h3 class="panel-title">Data Pengelola</h3>
-                  <p class="panel-subtitle">Catatan: Jika anda menghapus data pengelola anda juga harus menghapus data akun di halaman akun</p>
+                  <!-- <p class="panel-subtitle">Catatan: Jika anda menghapus data pengelola anda juga harus menghapus data akun di halaman akun</p>
                   <div class="right">
                     <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal"><i class="lnr lnr-plus-circle"></i></button>
-                  </div>
+                  </div> Tidak Jadi diimplementasikan-->
 								</div>
                 </div>
 								<div class="panel-body">
@@ -25,7 +25,7 @@
                         <th>JENIS KELAMIN</th>
                         <th>ALAMAT</th>
                         <th>Email</th>
-                        <th>AKSI</th>
+                        <!-- <th>AKSI</th> tidak jadi diimplementasikan-->
                         <th>KTP</th>
 											</tr>
 										</thead>
@@ -36,11 +36,11 @@
                         <td><a href="/pengelola/{{$pengelola->id}}/profile">{{$pengelola->nama_belakang}}</a></td>
                         <td>{{$pengelola->jenis_kelamin}}</td>
                         <td>{{$pengelola->alamat}}</td>
-                        <td>{{$pengelola->email}}</td>
-                        <td>
+                        <td>{{$pengelola->User->email}}</td>
+                        <!-- <td>
                           <a href="/pengelola/{{$pengelola->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
                           <a href="/pengelola/{{$pengelola->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Yakin?')">Delete</a>
-                        </td>
+                        </td> tidak jadi di implementasikan -->
                         <td><a href="/pengelola/{{$pengelola->id}}/ktp" class="btn btn-primary btn-sm">LihatKTP</a></td>
                       </tr>
                       @endforeach
@@ -55,7 +55,7 @@
   </div>
 
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -141,4 +141,5 @@
         </div>
       </div>
     </div>
+  </div> Tidak jadi diimplementasikan -->
 @stop

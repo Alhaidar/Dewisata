@@ -40,7 +40,7 @@
 											<li>Tanggal lahir <span>{{auth()->user()->wisatawan->tanggal_lahir}}</span></li>
 											<li>Jenis Kelamin <span>{{auth()->user()->wisatawan->jenis_kelamin}}</span></li>
 											<li>Alamat <span>{{auth()->user()->wisatawan->alamat}}</span></li>
-                      <li>Email <span>{{auth()->user()->wisatawan->email}}</span></li>
+                      <li>Email <span>{{auth()->user()->wisatawan->User->email}}</span></li>
 											<li>No Hp <span>{{auth()->user()->wisatawan->no_hp}}</span></li>
 										</ul>
 									</div>

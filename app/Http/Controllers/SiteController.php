@@ -24,6 +24,14 @@ class SiteController extends Controller
 
     public function postregister(Request $request)
     {
+      $messages = [
+        'required' => ' Maaf Data jangan sampai kosong',
+        'min' => ':attribute harus diisi minimal :min karakter',
+        'max' => ':attribute harus diisi maksimal :max karakter',
+        'numeric' => ':attribute harus diisi dengan angka',
+        'same' => 'konfirmasi password tidak cocok ',
+        'mimes' => 'format yang didukung hanya jpg, png, dan jpeg',
+      ];
       $this->validate($request,[
         'nik' => 'required|min:16',
         'nama_depan' => 'required|min:3',
@@ -31,10 +39,11 @@ class SiteController extends Controller
         'email' => 'required|email|unique:users',
         'jenis_kelamin' => 'required',
         'alamat' => 'required',
-        'no_hp' => 'required|min:11',
+        'no_hp' => 'required|min:11|numeric',
         'password'=> 'required',
+        'confirmation'=> 'required|same:password',
         'ktp' => 'mimes:jpg,png,jpeg',
-      ]);
+      ],$messages);
       //insert ke tabel user
       $user = new \App\User;
       $user->role = 'pengelola';
@@ -50,6 +59,7 @@ class SiteController extends Controller
         $request->file('ktp')->move('ktp/',$request->file('ktp')->getClientOriginalName());
         $pengelola->ktp=$request->file('ktp')->getClientOriginalName();
         $pengelola->save();
+      //insert ke tabel wisata
       }
       return redirect('/login')->with('sukses','Pendaftaran Berhasil');
     }
@@ -65,6 +75,7 @@ class SiteController extends Controller
           'alamat' => 'required',
           'no_hp' => 'required|min:11',
           'password'=> 'required',
+          'confirmation' => 'required|same:password',
         ]);
       //insert ke tabel user
       $user = new \App\User;

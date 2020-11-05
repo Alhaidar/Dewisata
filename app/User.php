@@ -47,6 +47,11 @@ class User extends Authenticatable
       return $this->hasOne(Wisatawan::class);
     }
 
+    public function wisata()
+    {
+      return $this->hasOne(Wisata::class);
+    }
+
     public function getAvatar()
     {
       if(!$this->avatar){

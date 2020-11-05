@@ -89,12 +89,20 @@
                     <span class="help-block">{{$errors->first('no_hp')}}</span>
                   @endif
                 </div>
-                <div class="form-group {{$errors->has('no_hp') ? 'has-error' : ''}}">
+                <div class="form-group {{$errors->has('password') ? 'has-error' : ''}}">
                   <label for="exampleFormControlSelect1">Password</label>
                   <input name="password" type="password" class="form-control" id="name"
                   placeholder="password" value="{{old('password')}}">
                   @if($errors->has('password'))
                     <span class="help-block">{{$errors->first('password')}}</span>
+                  @endif
+                </div>
+                <div class="form-group {{$errors->has('confirmation') ? 'has-error' : ''}}">
+                  <label for="exampleFormControlSelect1">Password</label>
+                  <input name="confirmation" type="password" class="form-control" id="name"
+                  placeholder="konfirmasi password">
+                  @if($errors->has('confirmation'))
+                    <span class="help-block">{{$errors->first('confirmation')}}</span>
                   @endif
                 </div>
                 <div class="form-group {{$errors->has('ktp') ? 'has-error' : ''}}">

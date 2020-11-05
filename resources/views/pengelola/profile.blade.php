@@ -44,7 +44,7 @@
 											<li>No Hp <span>{{$pengelola->no_hp}}</span></li>
 										</ul>
 									</div>
-									<div class="text-center"><a href="/pengelola/{{$pengelola->id}}/edit" class="btn btn-primary">Edit Profile</a></div>
+									<!-- <div class="text-center"><a href="/pengelola/{{$pengelola->id}}/edit" class="btn btn-primary">Edit Profile</a></div> Tidak diimplementasikan -->
 								</div>
 								<!-- END PROFILE DETAIL -->
 							</div>

@@ -40,11 +40,11 @@
 											<li>Tanggal lahir <span>{{$wisatawan->tanggal_lahir}}</span></li>
 											<li>Jenis Kelamin <span>{{$wisatawan->jenis_kelamin}}</span></li>
 											<li>Alamat <span>{{$wisatawan->alamat}}</span></li>
-											<li>Email <span>{{$wisatawan->email}}</span></li>
+											<li>Email <span>{{$wisatawan->User->email}}</span></li>
 											<li>No Hp <span>{{$wisatawan->no_hp}}</span></li>
 										</ul>
 									</div>
-									<div class="text-center"><a href="/wisatawan/{{$wisatawan->id}}/edit" class="btn btn-primary">Edit Profile</a></div>
+									<!-- <div class="text-center"><a href="/wisatawan/{{$wisatawan->id}}/edit" class="btn btn-primary">Edit Profile</a></div> tidak diimplementasikan -->
 								</div>
 								<!-- END PROFILE DETAIL -->
 							</div>
